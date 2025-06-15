@@ -31,3 +31,4 @@ C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0
 C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.pdb
 C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.genruntimeconfig.cache
 C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\ref\FE PegawaiKontrak.dll
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.sourcelink.json

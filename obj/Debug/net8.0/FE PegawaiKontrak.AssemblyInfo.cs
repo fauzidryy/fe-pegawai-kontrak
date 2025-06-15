@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FE PegawaiKontrak")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+171a50f7783f6f15c05792f30d65155b4413db75")]
 [assembly: System.Reflection.AssemblyProductAttribute("FE PegawaiKontrak")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FE PegawaiKontrak")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

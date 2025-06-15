@@ -37,13 +37,13 @@
 
         <div class="col-md-6 mb-3">
             <label asp-for="TanggalMulaiKontrak" class="form-label"></label>
-            <input asp-for="TanggalMulaiKontrak" class="form-control" type="date" />
+            <input asp-for="TanggalMulaiKontrak" class="form-control" type="date" id="startDate" />
             <span asp-validation-for="TanggalMulaiKontrak" class="text-danger"></span>
         </div>
 
         <div class="col-md-6 mb-3">
             <label asp-for="TanggalHabisKontrak" class="form-label"></label>
-            <input asp-for="TanggalHabisKontrak" class="form-control" type="date" />
+            <input asp-for="TanggalHabisKontrak" class="form-control" type="date" id="endDate" />
             <span asp-validation-for="TanggalHabisKontrak" class="text-danger"></span>
         </div>
     </div>
@@ -55,5 +55,7 @@
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="~/js/validation-date.js" asp-append-version="true"></script>
     }
 }
