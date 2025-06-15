@@ -1,0 +1,33 @@
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\appsettings.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\FE PegawaiKontrak.staticwebassets.runtime.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\FE PegawaiKontrak.staticwebassets.endpoints.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\FE PegawaiKontrak.exe
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\FE PegawaiKontrak.deps.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\FE PegawaiKontrak.runtimeconfig.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\FE PegawaiKontrak.dll
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\bin\Debug\net8.0\FE PegawaiKontrak.pdb
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.AssemblyInfoInputs.cache
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.AssemblyInfo.cs
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.csproj.CoreCompileInputs.cache
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.RazorAssemblyInfo.cache
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.RazorAssemblyInfo.cs
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\scopedcss\bundle\FE PegawaiKontrak.styles.css
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\scopedcss\projectbundle\FE PegawaiKontrak.bundle.scp.css
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.dll
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\refint\FE PegawaiKontrak.dll
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.pdb
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\FE PegawaiKontrak.genruntimeconfig.cache
+C:\Users\fauzi\source\repos\FE PegawaiKontrak\FE PegawaiKontrak\obj\Debug\net8.0\ref\FE PegawaiKontrak.dll

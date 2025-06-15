@@ -1,0 +1,25 @@
+﻿@model FE_PegawaiKontrak.Models.Cabang
+
+@{
+    ViewData["Title"] = "Tambah Cabang";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post" class="p-4 border rounded shadow-sm">
+
+    <div class="mb-3">
+        <label asp-for="NamaCabang" class="form-label"></label>
+        <input asp-for="NamaCabang" class="form-control" />
+        <span asp-validation-for="NamaCabang" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-bni">Simpan</button>
+    <a asp-action="Index" class="btn btn-secondary">Kembali</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

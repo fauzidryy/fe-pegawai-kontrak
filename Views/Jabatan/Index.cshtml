@@ -1,0 +1,55 @@
+﻿@model List<FE_PegawaiKontrak.Models.Jabatan>
+
+@{
+    ViewData["Title"] = "Daftar Jabatan";
+}
+
+<h2 class="mb-4 text-xl fw-bold">Daftar Jabatan</h2>
+
+<a class="btn btn-bni mb-3" asp-action="Create">+ Tambah Jabatan</a>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 300px;">
+        <div class="alert alert-info text-center">
+            Belum ada jabatan yang terdaftar<br />
+            Yuk klik <strong>+ Tambah Jabatan</strong> di atas buat nambahin yaa
+        </div>
+    </div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>No</th>
+                <th>Nama Jabatan</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].NamaJabatan</td>
+                    <td>
+                        <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@Model[i].Id">Edit</a>
+                        <a class="btn btn-sm btn-danger btn-delete"
+                           data-id="@Model[i].Id"
+                           data-nama="@Model[i].NamaJabatan"
+                           href="javascript:void(0)">
+                            Hapus
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @section Scripts {
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="~/js/alerts.js" asp-append-version="true"></script>
+        <script src="~/js/delete-jabatan.js" asp-append-version="true"></script>
+    }
+}

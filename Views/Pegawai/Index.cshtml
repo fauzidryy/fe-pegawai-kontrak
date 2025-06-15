@@ -1,0 +1,116 @@
+﻿@model List<FE_PegawaiKontrak.Models.Pegawai>
+
+@{
+    ViewData["Title"] = "Daftar Pegawai";
+}
+
+<h2 class="mb-4 text-xl font-bold">Daftar Pegawai</h2>
+
+<a class="btn btn-bni mb-3" asp-action="Create">+ Tambah Pegawai</a>
+
+<form asp-controller="Pegawai" asp-action="UploadExcel" method="post" enctype="multipart/form-data" class="mb-4">
+    <div class="input-group">
+        <input type="file" name="file" accept=".xls,.xlsx" class="form-control" required />
+        <button type="submit" class="btn btn-success">📤 Import Excel</button>
+    </div>
+</form>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 300px;">
+        <div class="alert alert-info text-center">
+            Belum ada pegawai yang terdaftar 🏢<br />
+            Yuk klik <strong>+ Tambah Pegawai</strong> di atas buat nambahin yaa
+        </div>
+    </div>
+}
+else
+{
+    <div class="mb-3">
+        <label class="me-2 fw-bold">Filter Kontrak:</label>
+        <button class="btn btn-outline-primary btn-sm me-2 filter-btn" data-filter="all">Semua</button>
+        <button class="btn btn-outline-success btn-sm me-2 filter-btn" data-filter="active">Masih Aktif</button>
+        <button class="btn btn-outline-warning btn-sm me-2 filter-btn" data-filter="near">Akan Habis Kontrak</button>
+        <button class="btn btn-outline-danger btn-sm filter-btn" data-filter="expired">Sudah Habis Kontrak</button>
+    </div>
+
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>No</th>
+                <th>Nama Pegawai</th>
+                <th>Nama Cabang</th>
+                <th>Jabatan</th>
+                <th>Tanggal Mulai Kontrak</th>
+                <th>Tanggal Habis Kontrak</th>
+                <th>Catatan</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var today = DateTime.Today;
+                var endDate = Model[i].TanggalHabisKontrak.Date;
+                var diff = (endDate - today).TotalDays;
+
+                string status = diff < 0 ? "expired" :
+                diff <= 7 ? "near" : "active";
+
+                <tr data-status="@status">
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].NamaPegawai</td>
+                    <td>@Model[i].NamaCabang</td>
+                    <td>@Model[i].NamaJabatan</td>
+                    <td>@Model[i].TanggalMulaiKontrak.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("id-ID"))</td>
+                    <td>@Model[i].TanggalHabisKontrak.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("id-ID"))</td>
+                    <td>
+                        @if (diff < 0)
+                        {
+                            <span class="badge bg-danger">❌ Kontrak telah habis</span>
+                        }
+                        else if (diff <= 7)
+                        {
+                            <span class="badge bg-warning text-dark">⚠️ Kontrak akan habis</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success">✅ Kontrak masih lama</span>
+                        }
+                    </td>
+
+                    <td class="text-center">
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-sm p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: none;">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item text-warning" asp-action="Edit" asp-route-id="@Model[i].Id">
+                                        ✏️ Edit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger btn-delete"
+                                       data-id="@Model[i].Id"
+                                       data-nama="@Model[i].NamaPegawai"
+                                       href="javascript:void(0)">
+                                        🗑️ Hapus
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @section Scripts {
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="~/js/alerts.js" asp-append-version="true"></script>
+        <script src="~/js/delete-pegawai.js" asp-append-version="true"></script>
+        <script src="~/js/filter-pegawai.js" asp-append-version="true"></script>
+    }
+}

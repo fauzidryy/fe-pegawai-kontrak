@@ -1,0 +1,62 @@
+﻿@model FE_PegawaiKontrak.Models.Pegawai
+
+@{
+    ViewData["Title"] = "Edit Pegawai";
+    var cabangs = ViewBag.Cabangs as List<FE_PegawaiKontrak.Models.Cabang>;
+    var jabatans = ViewBag.Jabatans as List<FE_PegawaiKontrak.Models.Jabatan>;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" method="post" class="p-4 border rounded shadow-sm">
+    <input type="hidden" asp-for="Id" />
+
+    <input type="hidden" asp-for="KodePegawai" />
+
+    <div class="mb-3">
+        <label asp-for="NamaPegawai" class="form-label"></label>
+        <input asp-for="NamaPegawai" class="form-control" />
+        <span asp-validation-for="NamaPegawai" class="text-danger"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="CabangId" class="form-label">Cabang</label>
+            <select asp-for="CabangId" class="form-select" asp-items="@(new SelectList(cabangs, "Id", "NamaCabang"))">
+                <option value="">-- Pilih Cabang --</option>
+            </select>
+            <span asp-validation-for="CabangId" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label asp-for="JabatanId" class="form-label">Jabatan</label>
+            <select asp-for="JabatanId" class="form-select" asp-items="@(new SelectList(jabatans, "Id", "NamaJabatan"))">
+                <option value="">-- Pilih Jabatan --</option>
+            </select>
+            <span asp-validation-for="JabatanId" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="TanggalMulaiKontrak" class="form-label"></label>
+            <input asp-for="TanggalMulaiKontrak" class="form-control" type="date" />
+            <span asp-validation-for="TanggalMulaiKontrak" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label asp-for="TanggalHabisKontrak" class="form-label"></label>
+            <input asp-for="TanggalHabisKontrak" class="form-control" type="date" />
+            <span asp-validation-for="TanggalHabisKontrak" class="text-danger"></span>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-bni">Simpan Perubahan</button>
+    <a asp-action="Index" class="btn btn-secondary">Kembali</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
